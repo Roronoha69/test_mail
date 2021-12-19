@@ -4,10 +4,10 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
 
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = smtp
   host = "https://testmailergo.herokuapp.com/"
-  config.action_mailer.default_url_options = 
-  ActionMailer::Base.smtp_settings = {host: host}
+  config.action_mailer.default_url_options = {host: host}
+  ActionMailer::Base.smtp_settings =   {
     :address            => 'smtp.gmail.com',
     :port               => 587,
     :domain             => 'gmail.com', #you can also use google.com
